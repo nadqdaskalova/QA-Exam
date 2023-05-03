@@ -29,7 +29,7 @@ class Tables(unittest.TestCase):
         self.driver.save_screenshot('sorted_last_names.png')
         last_name_column = driver.find_elements(By.CSS_SELECTOR,'#table1 tbody tr td:nth-of-type(1)')
         last_names = [name.text for name in last_name_column]
-        assert last_names == sorted(last_names)
+        self.assertEqual(last_names, sorted(last_names))
 
     def test_sort_emails(self):
         driver = self.driver
@@ -43,7 +43,7 @@ class Tables(unittest.TestCase):
         self.driver.save_screenshot('sorted_emails.png')
         email_column = driver.find_elements(By.CSS_SELECTOR,'#table1 tbody tr td:nth-of-type(3)')
         emails = [email.text for email in email_column]
-        assert emails == sorted(emails)
+        self.assertEqual(emails, sorted(emails))
 
 if __name__ == "__main__":
     unittest.main()

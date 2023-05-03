@@ -1,0 +1,1 @@
+/Library/Frameworks/Python.framework/Versions/3.11/bin/python3 /Users/nadya/Desktop/vum/QAExam/QA-Exam/test_sortable_data_tables.py
